@@ -3,14 +3,11 @@ import reactLogo from "./../../assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./index.css";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  decrement,
-  increment,
-} from "../../store/features/counter/counterSlice";
+import { decrement, increment } from "../../store/counter/counterSlice";
 
 function App() {
   const [count, setCount] = useState(0);
-  const countInStore = useSelector((state: any) => state.counter.value);
+  const countInStore = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
 
   return (

@@ -2,12 +2,36 @@ import { useState } from "react";
 import reactLogo from "./../../assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./index.css";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  decrement,
+  increment,
+} from "../../store/features/counter/counterSlice";
 
 function App() {
   const [count, setCount] = useState(0);
+  const countInStore = useSelector((state: any) => state.counter.value);
+  const dispatch = useDispatch();
 
   return (
     <>
+      <div>
+        <div>
+          <button
+            aria-label="Increment value"
+            onClick={() => dispatch(increment())}
+          >
+            Increment
+          </button>
+          <span>{countInStore}</span>
+          <button
+            aria-label="Decrement value"
+            onClick={() => dispatch(decrement())}
+          >
+            Decrement
+          </button>
+        </div>
+      </div>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

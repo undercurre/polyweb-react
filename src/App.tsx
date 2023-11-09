@@ -8,6 +8,7 @@ function App() {
       <div>
         <Link to="/">Index</Link>
         <Link to="/about">About</Link>
+        <Link to="/store">Store</Link>
       </div>
       <Outlet />
     </>

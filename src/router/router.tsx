@@ -21,6 +21,11 @@ const router = createBrowserRouter([
         // Single route in lazy file
         lazy: () => import("../view/store/counter"),
       },
+      {
+        path: "component",
+        // Single route in lazy file
+        lazy: () => import("../view/componentLib/index"),
+      },
     ],
   },
 ]);

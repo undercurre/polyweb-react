@@ -1,4 +1,4 @@
-import Index from "../view/index";
+import Map from "../view/Map/Index";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "../App";
 
@@ -9,22 +9,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Index />,
-      },
-      {
-        path: "about",
-        // Single route in lazy file
-        lazy: () => import("../view/about/index"),
-      },
-      {
-        path: "store",
-        // Single route in lazy file
-        lazy: () => import("../view/store/counter"),
-      },
-      {
-        path: "component",
-        // Single route in lazy file
-        lazy: () => import("../view/componentLib/index"),
+        element: <Map />,
       },
     ],
   },

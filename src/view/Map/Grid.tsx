@@ -35,7 +35,7 @@ const Grid = ({ number = 23, lineWidth = 0.026, baseHeight, values }) => {
         <lightSweepMaterial />
       </mesh>
       <Text3D
-        font={"./MFTianLiNoncommercial_Regular.json"}
+        font={"/public/source/MFTianLiNoncommercial_Regular.json"}
         position={[-6, 2, -15]}
         rotation={[-Math.PI * 0.2, 0, 0]}
         {...textConfig}
